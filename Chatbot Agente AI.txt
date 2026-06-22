@@ -1,0 +1,28 @@
+vorrei realizzare un chatbot collegato ad un agente AI, da embeddare all'interno del sito web https://www.centralinoai.it/ realizzato con wordpress, per rispondere alle domande degli utenti.
+Vorrei che tu creassi il codice del frontend e del backend e pensavo di utilizzare un tool tipo Vercel per l'hosting e di embeddarlo nel sito web attraverso una stringa di codice. Non so se serve utilizzare Github per caricare il codice, nel caso ho già l'account collegato a Vercel.
+Come LLM pensavo di utilizzare Gemini, non saprei quale modello in particolare, consigliami tu, vorrei far in modo di non spendere nulla e rimanere entro i limiti gratuiti.
+Vorrei mettere anche dei guardrail sia in entrata che in uscita, per fare in modo che l'agente AI risponda soltanto a domande inerenti al centralino AI, ad esempio: quali sono le caratteristiche e funzionalità di AI-Voice, quali tipo di procedure si possono automatizzare, i benefici per un'azienda che implementa un centralino dotato di intelligenza artificiale collegato al proprio ERP o CRM, ecc.
+I guardrail devono proteggere l'agente AI da un utilizzo improprio in modo che l'utente non possa chiedere nulla al di fuori del prodotto e dell'argomento centralino con intelligenza artificiale.
+Ti ho caricato delle immagini del frontend a cui puoi ispirarti.
+questo è il link da cui ho preso le immagini così hai anche un riferimento per le animazioni: https://dribbble.com/shots/22022778-E-commerce-Chatbot-Hellorep-ai
+Come colori direi di utilizzare il blu scuro e l'arancione del sito, questi sono i codici esadecimali: blu #003559 ; arancione #FF9914.
+Vorrei che l'icona del chatbot fosse posizionata in basso a destra e vorrei che fosse animata, proprio come nel link di dribble che ti ho incollato.
+L'agente AI dovrebbe avere secondo me una memoria semplice con al massimo 10 messaggi, ma consigliami tu se pensi che ne servano meno.
+Non so se pre creare questo agente AI sia sufficiente un prompt di sistema o è meglio creare un file gemini.md che contenga tutte le informazioni e il contesto in maniera più strutturata.
+Prima di realizzare il codice vorrei che creassi un PRD in modo da chiarire bene il comportamento e lo scopo del chatbot: rispondere su AI-Voice, proporre una call con un consulente attraverso la compilazione del form di contatto e qualificare i lead.
+Attraverso questo chatbot vorrei aumentare le conversioni sul sito web e ottenere più lead.
+Fammi sapere se ti servono delle skill particolari. Quelle attualmente installate le trovi nella cartella root (PROGETTI Antigravity).
+La cartella del progetto si chiama chatbot-centralino-ai.
+Ti chiedo di creare anche un file memory.md per questo progetto per poter riprendere il lavoro nei prossimi giorni. Salva i dati aggiornando il file quando lo ritieni opportuno.
+Prima di iniziare a scrivere codice fammi tutte le domande che ti servono per creare il PRD e realizzare al meglio il chatbot collegato all'agente AI.
+
+Rispondo ai vari punti
+1. Conoscenza e Contesto (Knowledge Base): creiamo insieme da zero il file con tutte le funzionalità, procedure automatizzabili e benefici. Puoi ispirarti ai contenuti del sito https://www.centralinoai.it.
+2. Qualificazione dei Lead: è sufficiente che il chatbot chieda che tipo di azienda si tratta e quali sono le loro attuali difficoltà, in modo da poter rispondere all'utente in maniera professionale. Alla fine della conversazione il chatbot deve proporre all'utente di approfondire con un consulente compilando il form di contatto presente a fondo pagina.
+Non deve proporlo per forza ad ogni conversazione, ma quando ci sono domande pertinenti che portano come naturale conclusione la necessità di approfondire con un consulente.
+3. Prenotazione Call / Form di contatto: l'url per portare l'utente direttamente al form di contatto è https://www.centralinoai.it/#demo
+4. Gestione dei Guardrail (Risposte fuori tema): Se un utente fa una domanda completamente fuori contesto, la risposta standard di "cortesia" del bot è: Posso rispondere soltanto a domande che riguardano l'argomento Centralino con Intelligenza Artificiale.
+5. Modello LLM e Memoria: va benissimo Gemini 1.5 Flash. Concordo per la memoria con 10 messaggi.
+6. Integrazione su WordPress: sono d'accordo.
+
+
