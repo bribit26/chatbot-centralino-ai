@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { MessageSquare, X, Send, Bot, User, ChevronRight } from 'lucide-react';
+import { Sparkles, X, Send, Bot, User, ChevronRight } from 'lucide-react';
 
 const SUGGESTIONS = [
   "Quali sono le caratteristiche di AI-Voice?",
@@ -147,8 +147,11 @@ export default function ChatWidget() {
       </div>
 
       {/* Floating Button */}
-      <button className={`ai-voice-fab ${isOpen ? 'hidden' : ''}`} onClick={toggleChat} aria-label="Apri chat">
-        <MessageSquare size={28} />
+      <button className={`ai-voice-fab ${isOpen ? 'active' : ''}`} onClick={toggleChat} aria-label="Apri chat">
+        <div className="fab-icon-container">
+          <Sparkles className="icon-sparkles" size={26} />
+          <X className="icon-close" size={26} />
+        </div>
       </button>
     </div>
   );

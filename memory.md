@@ -12,13 +12,12 @@
 - **CTA Link:** https://www.centralinoai.it/#demo
 
 ## Current State (Aggiornato)
-- **Design & Sviluppo Completati:** Il widget Frontend in React (usando Vite) e l'API Serverless (`api/chat.js`) per Vercel sono stati completamente sviluppati.
-- **Logica AI:** Il file `gemini.md` funge da Knowledge Base per l'agente. I guardrail (temperature 0.2 e blocco degli argomenti fuori tema) sono stati integrati.
-- **Build testata:** Il comando `npm run build` genera correttamente i file minimizzati `widget.js` e `widget.css`.
-- **Documentazione:** È stato generato il file di `walkthrough.md` contenente la sintesi e i passaggi per il deploy.
+- **Design & Sviluppo Completati:** Il widget Frontend in React (usando Vite) e l'API Serverless (`api/chat.js`) per Vercel sono stati sviluppati.
+- **Logica AI:** Il file `gemini.md` è stato convertito in `api/prompt.js` per risolvere problemi di compatibilità con le funzioni serverless di Vercel. Il modello LLM utilizzato è `gemini-2.5-flash` per restare all'interno dei limiti del Free Tier di Google AI Studio in Europa.
+- **Deploy:** Il codice è ospitato su GitHub e deployato con successo su Vercel. Il widget è in grado di dialogare correttamente con le API e rispondere alle domande.
+- **Integrazione:** Sono stati impostati i percorsi assoluti, i CORS e i tag corretti per l'inserimento in WordPress.
 
-## Prossimi Passi (Da fare da Lunedì)
-1. **Repository:** Inizializzare un repository Git, fare il commit e pushare i file su GitHub.
-2. **Deploy Vercel:** Importare il repository su Vercel.
-3. **Variabili d'ambiente:** Aggiungere la `GEMINI_API_KEY` su Vercel prima del deploy finale.
-4. **Integrazione WordPress:** Inserire i tag `<script>` e `<link>` (forniti da Vercel) nel Footer del sito www.centralinoai.it.
+## Prossimi Passi
+1. **Miglioramento UI/UX:** Rendere l'icona del chatbot più "particolare" rispetto a un'icona generica.
+2. **Animazioni Avanzate:** Introdurre animazioni fluide ispirate ai migliori design Dribbble (es. morphing del pulsante, effetti ripple/pulsanti, transizioni morbide all'apertura).
+3. **Perfezionamento Grafico:** Applicare micro-interazioni e stili CSS moderni al widget per renderlo un prodotto "Premium".
