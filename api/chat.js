@@ -48,6 +48,6 @@ export default async function handler(req, res) {
     return res.status(200).json({ reply: response.text });
   } catch (error) {
     console.error('Gemini API error:', error);
-    return res.status(500).json({ error: 'Internal Server Error' });
+    return res.status(500).json({ error: error.message, stack: error.stack });
   }
 }
