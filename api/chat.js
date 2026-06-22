@@ -34,7 +34,7 @@ export default async function handler(req, res) {
     const currentMessage = messages[messages.length - 1].text;
 
     const response = await ai.models.generateContent({
-      model: 'gemini-1.5-flash',
+      model: 'gemini-2.0-flash',
       contents: [
         ...history,
         { role: 'user', parts: [{ text: currentMessage }] }
