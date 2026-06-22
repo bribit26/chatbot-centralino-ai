@@ -3,7 +3,7 @@
 .ai-voice-widget-container {
   position: fixed;
   bottom: 24px;
-  right: 24px;
+  right: 85px; /* Spostato a sinistra per non coprire iubenda */
   z-index: 999999; /* Ensure it stays on top in WordPress */
   font-family: 'Inter', 'Open Sans', 'Helvetica Neue', sans-serif;
 }
@@ -104,12 +104,14 @@
   font-size: 18px;
   font-weight: 700;
   letter-spacing: -0.5px;
+  color: #FF9914 !important; /* Arancione forzato per override su WP */
 }
 
 .ai-voice-subtitle {
   margin: 0;
   font-size: 13px;
   opacity: 0.8;
+  color: #ffffff !important; /* Bianco forzato per override su WP */
 }
 
 .ai-voice-close-btn {

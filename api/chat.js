@@ -1,6 +1,5 @@
 import { GoogleGenAI } from '@google/genai';
-import fs from 'fs';
-import path from 'path';
+import { systemInstruction } from './prompt.js';
 
 const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
 
@@ -23,10 +22,8 @@ export default async function handler(req, res) {
   try {
     const { messages } = req.body;
 
-    // Read the system instruction (Knowledge Base) from gemini.md
-    const geminiMdPath = path.join(process.cwd(), 'gemini.md');
-    const systemInstruction = fs.readFileSync(geminiMdPath, 'utf8');
-
+    // The systemInstruction is now imported from prompt.js
+    
     // Format history for the Gemini API (excluding the current user message)
     // The @google/genai SDK requires contents array with role and parts
     const history = messages.slice(0, -1).map(msg => ({
