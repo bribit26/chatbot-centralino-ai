@@ -146,6 +146,11 @@ export default function ChatWidget() {
         </div>
       </div>
 
+      {/* Tooltip / Fumetto */}
+      <div className={`ai-voice-tooltip ${isOpen ? 'hidden' : ''}`} onClick={toggleChat}>
+        Posso aiutarti? 👋
+      </div>
+
       {/* Floating Button */}
       <button className={`ai-voice-fab ${isOpen ? 'active' : ''}`} onClick={toggleChat} aria-label="Apri chat">
         <div className="fab-icon-container">
