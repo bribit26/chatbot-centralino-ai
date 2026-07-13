@@ -100,29 +100,33 @@
 /* Tooltip / Fumetto */
 .ai-voice-tooltip {
   position: absolute;
-  right: 50%; /* Centrato rispetto al contenitore (che ha larghezza del FAB) */
-  bottom: 75px; /* Posizionato sopra il bottone (60px) con un po' di margine */
+  right: -30px; /* Absolute positioning relative to the right edge */
+  bottom: 80px; 
   background-color: white;
   color: #003559;
   padding: 12px 18px;
   border-radius: 20px;
   font-size: 14px;
   font-weight: 600;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
   cursor: pointer;
   white-space: nowrap;
   opacity: 0;
-  transform: translateX(50%) translateY(10px);
   pointer-events: none;
-  animation: slideInTooltip 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) 2s forwards, floatTooltip 3s ease-in-out infinite 2.6s;
+  z-index: 1000000; 
+  /* 2s delay for slide in, then continuous floating */
+  animation: 
+    slideInTooltip 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) 2s forwards,
+    floatTooltip 3s ease-in-out 2.6s infinite forwards;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform-origin: bottom right;
 }
 
 .ai-voice-tooltip::after {
   content: '';
   position: absolute;
-  bottom: -6px; /* Triangolo verso il basso */
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: -6px;
+  right: 52px; /* Point to the center of the FAB */
   border-width: 6px 6px 0 6px;
   border-style: solid;
   border-color: white transparent transparent transparent;
@@ -130,19 +134,20 @@
 
 .ai-voice-tooltip.hidden {
   opacity: 0 !important;
+  transform: translateY(10px) scale(0.9) !important;
   pointer-events: none !important;
   animation: none !important;
-  transition: opacity 0.3s ease;
 }
 
 @keyframes slideInTooltip {
-  to { opacity: 1; transform: translateX(50%) translateY(0); pointer-events: all; }
+  0% { opacity: 0; transform: translateY(20px) scale(0.9); }
+  100% { opacity: 1; transform: translateY(0px) scale(1); pointer-events: auto; }
 }
 
 @keyframes floatTooltip {
-  0% { transform: translateX(50%) translateY(0px); }
-  50% { transform: translateX(50%) translateY(-6px); }
-  100% { transform: translateX(50%) translateY(0px); }
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
 }
 
 /* Chat Window */
