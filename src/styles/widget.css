@@ -100,7 +100,7 @@
 /* Tooltip / Fumetto */
 .ai-voice-tooltip {
   position: absolute;
-  right: -30px; /* Absolute positioning relative to the right edge */
+  right: 0; /* Allineato al bordo destro del FAB, non oltre: la vecchia offset -30px lo spingeva nella zona dell'icona iubenda, nascondendolo dietro il suo z-index */
   bottom: 80px; 
   background-color: white;
   color: #003559;
@@ -113,7 +113,7 @@
   white-space: nowrap;
   opacity: 0;
   pointer-events: none;
-  z-index: 1000000;
+  z-index: 2147483647;
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -136,7 +136,7 @@
   content: '';
   position: absolute;
   bottom: -6px;
-  right: 52px; /* Point to the center of the FAB */
+  right: 22px; /* Ricalcolato per puntare ancora al centro del FAB dopo lo spostamento del fumetto */
   border-width: 6px 6px 0 6px;
   border-style: solid;
   border-color: white transparent transparent transparent;
