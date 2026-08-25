@@ -148,7 +148,14 @@ export default function ChatWidget() {
 
       {/* Tooltip / Fumetto */}
       <div className={`ai-voice-tooltip ${isOpen ? 'hidden' : ''}`} onClick={toggleChat}>
-        Posso aiutarti? 👋
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" className="tooltip-icon" aria-hidden="true">
+          <rect x="3" y="4.5" width="18" height="12" rx="4" />
+          <path d="M8.5 20.5l2.7-3.8h1.6" strokeLinecap="round" strokeLinejoin="round" />
+          <circle cx="8.5" cy="10.5" r="1" fill="currentColor" stroke="none" />
+          <circle cx="12" cy="10.5" r="1" fill="currentColor" stroke="none" />
+          <circle cx="15.5" cy="10.5" r="1" fill="currentColor" stroke="none" />
+        </svg>
+        Posso aiutarti?
       </div>
 
       {/* Floating Button */}
